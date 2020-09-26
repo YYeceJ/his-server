@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.yyece.hisserver.mapper.DoctorMapper">
+    <sql id="table">doctor</sql>
+   <insert id="addDoctor" parameterType="com.yyece.hisserver.entity.Doctor">
+        INSERT into doctor (account,`password`,skilled_field,department_id,department_name,practice_experience,head,deleted,title_id,title_name)
+        VALUES (#{account},"welcome123",#{skilledField},#{departmentId},#{departmentName},#{practiceExperience},"",0,#{titleId},#{titleName})
+   </insert>
+</mapper>
